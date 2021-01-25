@@ -14,25 +14,29 @@ html {
 }
 
 body {
-  background-color: var(--color-blanco);
+  background-color: var(--color-negro);
+  border: solid 5px white;
+  max-width: 1200px;
+  margin: 1rem auto;
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-areas:
     "header header"
-    "author main"
+    "author  content"
     "footer footer";
 }
 
-img {
+#deadpool {
   border-radius: 50%;
   margin: 1rem;
+  border: solid 10px var(--color-negro);
 }
 
 ul {
   list-style: none;
 }
 
-/* Header*/
+/* ------------------------------------------------------------Header---------------------------------*/
 
 body > header {
   background-color: var(--color-negro);
@@ -71,7 +75,7 @@ body > header a {
   font-weight: bold;
 }
 
-/* author*/
+/* --------------------------------------------------------Author--------------------------------*/
 
 aside {
   grid-area: author;
@@ -95,18 +99,169 @@ aside > nav > ul > li {
 }
 
 aside > nav a {
+  color: var(--color-negro);
+}
+
+/*-------------------------------------------Main-------------------------------------------------*/
+body > main {
+  grid-area: content;
+  background-color: var(--color-blanco);
+}
+
+body h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+body h3 {
+  font-size: 1.5rem;
+}
+
+/*Favoritos*/
+
+.favoritos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.favoritos > h2 {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.favoritos > section {
+  margin: 0.5rem;
+  text-align: center;
+  border: solid 2px var(--color-negro);
+}
+
+.favoritos h3 {
+  padding: 0.5rem;
+  background-color: var(--color-negro);
+  color: var(--color-blanco);
+}
+
+.favoritos ul {
+  padding: 0.5rem;
+  background-color: var(--color-gris);
+}
+
+.favoritos a {
   text-decoration: none;
   color: var(--color-negro);
 }
 
-/*Main*/
-body > main {
-  grid-area: main;
+.comida {
+  flex-grow: 2;
 }
 
-/*formulario*/
+.canciones {
+  flex-grow: 2;
+}
+.peliculas {
+  flex-grow: 2;
+}
+.libros {
+  flex-grow: 2;
+}
 
-/* Footer */
+.favoritos > section:nth-child(1) ul li:hover {
+  list-style-image: url("./imgenes/comida.svg");
+}
+/*Horario*/
+
+.horario > table {
+  border: solid 2px var(--color-negro);
+  margin: 0.5rem auto;
+  text-align: center;
+}
+
+.horario th {
+  background-color: var(--color-negro);
+  color: white;
+}
+
+.horario thead th {
+  padding: 0.8rem;
+}
+
+.horario tbody th {
+  padding: 0.5rem;
+}
+
+.horario td {
+  background-color: var(--color-gris);
+  padding: 0.2rem;
+}
+
+/*Video*/
+.video {
+  text-align: center;
+  margin: 1rem;
+}
+
+.video h2 {
+  margin: 1rem;
+}
+
+/*---------------------------------------Formulario----------------------------------------------*/
+#formulario {
+  margin: 1rem 5rem;
+}
+
+#formulario legend {
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#formulario fieldset {
+  padding: 0.5rem;
+  background-color: var(--color-gris);
+  border: solid 2px var(--color-negro);
+}
+
+#formulario label {
+  margin: 0.2rem;
+  font-weight: bold;
+}
+
+#formulario input {
+  margin: 0.2rem;
+  border: solid 2px var(--color-negro);
+}
+
+#formulario fieldset:nth-of-type(1) {
+  text-align: center;
+}
+
+#formulario fieldset:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+}
+
+#formulario fieldset:nth-of-type(3) {
+  display: flex;
+  flex-direction: column;
+}
+#formulario fieldset:nth-of-type(4) {
+  display: flex;
+  flex-direction: column;
+}
+
+#formulario button {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  padding: 0.2rem 4rem;
+}
+
+#formulario input:required {
+  border-color: red;
+}
+/*---------------------------------------- Footer----------------------------------------------- */
 
 footer {
   color: var(--color-blanco);
@@ -119,14 +274,28 @@ footer h2 {
   margin: 1rem;
 }
 
-footer li {
-  display: inline-block;
-  margin: 0.2rem;
+footer nav {
+  margin-bottom: 1rem;
+}
+
+footer ul li {
+  display: inline;
   padding: 0.5rem;
 }
 
-footer a {
-  color: var(--color-gris);
+footer nav ul li a:link {
+  color: var(--color-blanco);
   font-weight: bold;
   text-align: center;
+}
+
+footer nav a:hover {
+  color: lightblue;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:visited {
+  color: var(--color-gris);
+  text-decoration: none;
 }

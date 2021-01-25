@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+html {
+  --color-blanco: white;
+  --color-gris: lightgray;
+  --color-negro: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--color-blanco);
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "header header"
+    "author main"
+    "footer footer";
+}
+
+img {
+  border-radius: 50%;
+  margin: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header*/
+
+body > header {
+  background-color: var(--color-negro);
+  color: var(--color-blanco);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: header;
+}
+
+body > header h1 {
+  font-size: 4rem;
+}
+
+body > header h2 {
+  font-size: 2.5rem;
+}
+
+body > header nav {
+  background-color: var(--color-negro);
+  width: 100%;
+}
+
+body > header > nav > ul {
+  display: flex;
+}
+
+body > header > nav ul li {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+body > header a {
+  text-decoration: none;
+  color: var(--color-blanco);
+  font-weight: bold;
+}
+
+/* author*/
+
+aside {
+  grid-area: author;
+  color: var(--color-negro);
+  background-color: var(--color-gris);
+}
+
+aside > nav {
+  text-align: center;
+}
+
+aside > nav > h2 {
+  margin: 1rem;
+  font-size: 2.5rem;
+}
+
+aside > nav > ul > li {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+aside > nav a {
+  text-decoration: none;
+  color: var(--color-negro);
+}
+
+/*Main*/
+body > main {
+  grid-area: main;
+}
+
+/*formulario*/
+
+/* Footer */
+
+footer {
+  color: var(--color-blanco);
+  background-color: var(--color-negro);
+  grid-area: footer;
+  text-align: center;
+}
+
+footer h2 {
+  margin: 1rem;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0.2rem;
+  padding: 0.5rem;
+}
+
+footer a {
+  color: var(--color-gris);
+  font-weight: bold;
+  text-align: center;
+}

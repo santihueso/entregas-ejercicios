@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+    <header>
+        <h1>Ejercicio HTML y CSS</h1>
+        <h2>Hack a Boss</h2>
+        <nav><ul>
+            <li><a href ="/index.html">Inicio</a></li>
+            <li><a href ="/contacto.html">Contacto</a></li>
+        </ul></nav>
+    </header>
+    <aside>
+        <nav>
+            <h2>Autor</h2>
+            <ul>
+                <li><img src="./imagenes/perfil.jpg" alt="Foto de perfil" width="200px" height="250px"/></li>
+                <li>Santiago Hueso</li>
+                <li>23 Años</li>
+                <li>Bogotá, Colombia</li>
+                <li><a href="https://github.com/santihueso">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/santiagohueso/"> LinkedIn</a></li>
+            </ul>
+        </nav>
+    <main>
+        <form action="" method="GET">
+            <h2>Formulario</h2>
+            
+            <fieldset>
+                <legend>Búsqueda</legend>
+                <label for="search">Búsqueda</label>
+                <input type="search" name="search" id="busqueda" />
+            </fieldset>
+            
+            <fieldset>
+              <legend>Datos de Contacto</legend>
+              <label for="name">Nombres y Apellidos</label>
+              <input type="text" name="name" id="nombre" autofocus required />
+              <label for="url">URL</label>
+              <input type="url" name="url" id="paginaWeb" placeholder="Escribe la URL de tu página web personal" />
+              <label for="email">Correo electrónico</label>
+              <input type="email" name="email" id="correo" required />
+              <label for="phone">Teléfono</label>
+              <input type="tel" name="phone" id="telefono" />
+            </fieldset>
+    
+            <fieldset>
+                <legend>Horario</legend>
+                <label for="datetime">Fecha y hora</label>
+                <input type="datetime" name="datetime" id="fechaYhora" />
+                <label for="date">Fecha</label>
+                <input type="date" name="date" id="fecha"/>
+                <label for="month">Mes</label>
+                <input type="month" name="month" id="mes"/>
+                <label for="week">Semana</label>
+                <input type="week" name="week" id="semana"/>
+                <label for="time">Hora</label>
+                <input type="time" name="time" id="hora"/>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Mas información</legend>
+                <label for="color">Color favorito</label>
+                <input type="color" name="color" id="color" />
+                <label for="number">Número favorito</label>
+                <input type="number" name="number" id="numero" min="-10" max="10" />
+                <label for="about">Sobre ti</label>
+                <textarea name="about" id="about" placeholder="Sobre ti ..." maxlength="250" minlength="0"></textarea>  
+            </fieldset>
+                        
+            <button type="submit">Enviar</button>
+         
+        </form>
+    </main>
+    <footer>
+        <h2>Webs externas</h2>
+        <ul>
+            <li><a href="https://independientesantafe.com/">Independiente Santafe</a></li>
+            <li><a href="https://stackoverflow.com/questions">Stack overflow</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/">MDN web docs</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
